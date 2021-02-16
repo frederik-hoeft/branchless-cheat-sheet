@@ -6,7 +6,17 @@
 int max(int a, int b)
 {
     const int BITSIZE_INT = ((sizeof(int) << 3) - 1));
-    return a + ((b - a) & ((a - b) >> BITSIZE_INT);
+    return a - ((a - b) & (a - b) >> BITSIZE_INT);
+}
+```
+
+### Min function
+
+```C
+int min(int a, int b)
+{
+    const int BITSIZE_INT = ((sizeof(int) << 3) - 1));
+    return b + ((a - b) & (a - b) >> BITSIZE_INT);
 }
 ```
 
