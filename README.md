@@ -29,5 +29,19 @@ int abs(int x)
     return x + ((x * (x >> BITSIZE_INT)) << 1);
 }
 ```
+
+### Swap function
+
+```C
+void swap(int* x, int* y)
+{
+    if (*x != *y)
+    {
+        *x ^= *y;
+        *y = *x ^ *y;
+        *x ^= *y;
+    }
+}
+```
  
 ## Unsigned ints
